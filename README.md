@@ -10,3 +10,5 @@ challenge 5-create booking appointment
 - THEN the text for that event is saved in local storage
 - THEN the saved events persist
 
+* This appointment setter is a live setting, were you are allowed to go back to previous,present, future dates. And you will be able to save the dates on any desire dates.
+
