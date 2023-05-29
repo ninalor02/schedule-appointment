@@ -21,14 +21,30 @@
     //
     // TODO: Add code to display the current date in the header of the page.
     
+    var saveBtn = $(".saveBtn")
+    var currentHour = moment().format("HH");
+    var currentHour = parseInt(currentHour);
+
+    $("#9Row").attr("data-time", moment("9:00 am", "h:mm a").format("HH"));
     
+    $(document).ready(function() {
+
+      renderPLans();
+
+      $("#currentDay").append();
+
+      function addDate() {
+      } setInterval(addDate, 1000);
+      
+      for (var i = 0; i <= 12; i++) {  
+        var inputHour = $("#" + i + "rows").attr("data-time");
+        var inputHourInt = parseInt(inputHour);
+      }
+    });
+  
     
-    
-    $(function () {
+  
 
 
-
-
-  });
 
   
