@@ -22,25 +22,22 @@
     // TODO: Add code to display the current date in the header of the page.
     
     var saveBtn = $(".saveBtn")
-    var currentHour = moment().format("HH");
-    var currentHour = parseInt(currentHour);
+    var currentDay = function () {
 
-    $("#9Row").attr("data-time", moment("9:00 am", "h:mm a").format("HH"));
+    var today = new Date();
+    var day = today.getDate();
+    var month = today.getMonth()+1;
+    var yyyy = today.getFullYear();
+
+    if(day<10) day='0' + day;
+    if(month<10) month='0' + month;
+    return (month+day+year);
+
+    };
+    console.log(currentDay('/'));
+    console.log(currentDay('-'));
     
-    $(document).ready(function() {
 
-      renderPLans();
-
-      $("#currentDay").append();
-
-      function addDate() {
-      } setInterval(addDate, 1000);
-      
-      for (var i = 0; i <= 12; i++) {  
-        var inputHour = $("#" + i + "rows").attr("data-time");
-        var inputHourInt = parseInt(inputHour);
-      }
-    });
   
     
   
