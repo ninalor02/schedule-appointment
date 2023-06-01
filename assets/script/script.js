@@ -54,6 +54,9 @@ newDate = dayjs().hour(12) // returns new dayjs object
 var futureHour=dayjs().format('h') 
 console.log('futureHour', futureHour);
 
+dayjs().hour() 
+newDate = dayjs().hour(+12)
+
 //past hours  testing - good
 var pastHour=dayjs().format('h') 
 console.log('pastHour', pastHour);
@@ -71,6 +74,7 @@ else if( currehour is = id change class to present)
 default (else) class should be past
 */
 
+/*  --------- > need to fix this part on JS
 
 var currentHour = document.querySelector("#currentHour");
 var pastHour = document.querySelector("#pastHour");
@@ -78,15 +82,17 @@ var futureHour= document.querySelector("#futureHour");
 
 var currentHour = localStorage.getItem("#currentHour");
 console.log('#currentHour', currentHour);
+*/
 
+var pastHour = document.querySelectorAll("#pastHour");
+var currentHour = document.querySelector("#currentHour");
+var futureHour = document.querySelectorAll("#futureHour");
 
-localStorage.setItem("#currentHour", currentHour);
-console.log('#currentHour', currentHour);
 
 currentHour.addEventListener("click", function() {
   if (currentHour < futureHour ) {
     
-    localStorage.setItem("count", count);
+    localStorage.setItem("#currentHour", currentHour);
   }
 });
 
