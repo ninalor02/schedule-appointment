@@ -28,11 +28,13 @@
 li - tag
 */
 
-console.log('here');
+// date display
+console.log('testing');
 
 
 $(function () {
-console.log('hello');
+  //testing purpose only
+  console.log('testing'); 
 
 var today = dayjs();
 console.log('var today', today.format('MMM D, YYYY'));
@@ -46,16 +48,36 @@ console.log('currentHour', currentHour);
 dayjs().hour() // gets current hour
 newDate = dayjs().hour(12) // returns new dayjs object
 
-/* need to loop 
+});
+/* need to for loop 
 
 if currentHour is greater then id  change class to future
 else if( currehour is = id change class to present)
 default (else) class should be past
 */
 
+for (var i = 0; i < currentHour.length; i++) {
+  paragraphTags[i].setAttribute(":");
+  console.log('data'
+  );
+ }
 
 
-});
+
+
+
+var currentHour = localStorage.getItem("currentHour");
+console.log('currentHour', currentHour);
+
+
+
+localStorage.setItem("currentHour", currentHour);
+console.log('currentHour', currentHour);
+
+
+
+
+
 
 
 
