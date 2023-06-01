@@ -36,44 +36,59 @@ $(function () {
   //testing purpose only
   console.log('testing'); 
 
+  // live dates //
 var today = dayjs();
 console.log('var today', today.format('MMM D, YYYY'));
 
 $('#currentDay').text(today.format('MMM D, YYYY'));
 console.log('#currentDay', $('#currentDay'));
 
+// live hours // 
 var currentHour=dayjs().format('h') 
 console.log('currentHour', currentHour);
 
 dayjs().hour() // gets current hour
 newDate = dayjs().hour(12) // returns new dayjs object
 
+//future hours
+var futureHour=dayjs().format('h') 
+console.log('futureHour', futureHour);
+
+//past hours  testing - good
+var pastHour=dayjs().format('h') 
+console.log('pastHour', pastHour);
+
+//testing past hours
+
+var pastHour=dayjs.extend('h')
+console.log('pastHour', pastHour);
+
 });
 /* need to for loop 
 
-if currentHour is greater then id  change class to future
+if (currentHour is greater then id  change class to future)
 else if( currehour is = id change class to present)
 default (else) class should be past
 */
 
-for (var i = 0; i < currentHour.length; i++) {
-  paragraphTags[i].setAttribute(":");
-  console.log('data'
-  );
- }
+
+var currentHour = document.querySelector("#currentHour");
+var pastHour = document.querySelector("#pastHour");
+var futureHour= document.querySelector("#futureHour");
+
+var currentHour = localStorage.getItem("#currentHour");
+console.log('#currentHour', currentHour);
 
 
+localStorage.setItem("#currentHour", currentHour);
+console.log('#currentHour', currentHour);
 
-
-
-var currentHour = localStorage.getItem("currentHour");
-console.log('currentHour', currentHour);
-
-
-
-localStorage.setItem("currentHour", currentHour);
-console.log('currentHour', currentHour);
-
+currentHour.addEventListener("click", function() {
+  if (currentHour < futureHour ) {
+    
+    localStorage.setItem("count", count);
+  }
+});
 
 
 
