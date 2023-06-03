@@ -27,23 +27,27 @@ newDate = dayjs().hour(12) // returns new dayjs object
 //future hours -- good
 var futureHour=dayjs().format('h') 
 console.log('futureHour', futureHour);
-//testing//
+
+//testing -- > this will add current hour into the notes on 9AM box//
 $('#9').text(today.format('h'));
 console.log('#9', $('#9'));
 
-
-dayjs().hour() 
-newDate = dayjs().hour(+12)
-
-//past hours  testing - good
-var pastHour=dayjs().format('h') 
-console.log('pastHour', pastHour);
-
-//testing past hours- need fixing
-
-var pastHour=dayjs.extend('h')
-console.log('pastHour', pastHour);
-
+for (let hour = 0; hour < hour.length; index++) {
+  const element = array[index];
+  
+  dayjs().hour() 
+  newDate = dayjs().hour(+12)
+  
+  //past hours  testing - good
+  var pastHour=dayjs().format('h') 
+  console.log('pastHour', pastHour);
+  
+  //testing past hours- need fixing
+  
+  var pastHour=dayjs.extend('h')
+  console.log('pastHour', pastHour);
+  
+}
 });
 
 /* need to for loop 
