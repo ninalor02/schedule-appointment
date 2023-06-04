@@ -33,21 +33,27 @@ var saveBtn = $('.saveBtn');
 console.log('#textArea', textArea);  //working//
 console.log('.saveBtn', saveBtn);   //working//
 
-saveBtn.on('click', function (event) {  
-console.log('save appointment', event.target);  // <--- jquery object, children, etc //
-console.log('save appointment', $(this));
+
+saveBtn.on("click", function(event) {
+  event.preventDefault();
+
+
+//saveBtn.on('click', function (event) {  
+console.log('appt saved', event.target);  // <--- jquery object, children, etc //
+console.log('appt saved', $(this));
 
 // $('col-8 col-md-10 description').siblings(event);
 
-var textDescription = $(this).siblings('.description')
-console.log(textDescription);
+var textDescription = $(this).siblings('.description').val();
+console.log(textDescription); //working//
 
-//localStorage.setItem('appointment', JSON.stringify(event));
+var rowTimeBlock = $(this).parent().attr("id");
+console.log(rowTimeBlock);  //unsure//
+
+localStorage.setItem("rowTimeBlock", textDescription);
+
 
 });
-
-
-
 
 
 
