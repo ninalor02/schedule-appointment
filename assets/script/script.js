@@ -1,74 +1,50 @@
-
+// ----> this is for the current live day and Date <---- //
 
 // date display
-console.log('testing');
-
+console.log('testing1'); //working//
 
 $(function () {
   //testing purpose only console.log within the funciton
-  console.log('testing'); 
+console.log('testing2'); //working//
 
-  // live dates //
+  // current day of the week //
+var dayWeek = dayjs();
+console.log('dayWeek'); //working//
+// current date //
 var today = dayjs();
-console.log('var today', today.format('MMM D, YYYY'));
+console.log('today', today.format('MMM D, YYYY')); //working//
 
 $('#currentDay').text(today.format('MMM D, YYYY'));
-console.log('#currentDay', $('#currentDay'));
+console.log('#currentDay', $('#currentDay')); //working//
 
-// live hours // 
-var currentHour=dayjs().format('h') 
-console.log('currentHour', currentHour);
+$('#currentDay').text(dayWeek);
+console.log('dayWeek1') //working//
 
-dayjs().hour() // gets current hour
-newDate = dayjs().hour(12) // returns new dayjs object
-
-// just added this after tutor//
-
-//future hours -- good
-var futureHour=dayjs().format('h') 
-console.log('futureHour', futureHour);
-
-//testing -- > this will add current hour into the notes on 9AM box//
-$('#9').text(today.format('h'));
-console.log('#9', $('#9'));
-
-for (let hour = 0; hour < hour.length; index++) {
-  const element = array[index];
-  
-  dayjs().hour() 
-  newDate = dayjs().hour(+12)
-  
-  //past hours  testing - good
-  var pastHour=dayjs().format('h') 
-  console.log('pastHour', pastHour);
-  
-  //testing past hours- need fixing
-  
-  var pastHour=dayjs.extend('h')
-  console.log('pastHour', pastHour);
-  
-}
 });
-
-/* need to for loop 
-
-if (currentHour is greater then id  change class to future)
-else if( currehour is = id change class to present)
-default (else) class should be past
-*/
-
-/*  --------- > need to fix this part on JS
-
-var currentHour = document.querySelector("#currentHour");
-var pastHour = document.querySelector("#pastHour");
-var futureHour= document.querySelector("#futureHour");
-
-var currentHour = localStorage.getItem("#currentHour");
-console.log('#currentHour', currentHour);
-*/
+// --> this is current live hours <---- //
 
 
 
+//  --> This is for the save button to local storage <-- //
+
+
+var textArea = $('#textArea');
+var saveBtn = $('.saveBtn');
+console.log('#textArea', textArea);  //working//
+console.log('.saveBtn', saveBtn);   //working//
+
+saveBtn.on('click', function (event) {  
+console.log('save appointment', event.target);  // <--- jquery object, children, etc //
+console.log('save appointment', $(this));
+
+// $('col-8 col-md-10 description').siblings(event);
+
+var textDescription = $(this).siblings('.description')
+console.log(textDescription);
+
+//localStorage.setItem('appointment', JSON.stringify(event));
+
+});
 
 
 
