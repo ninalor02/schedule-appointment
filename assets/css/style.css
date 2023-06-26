@@ -12,13 +12,12 @@ body {
 
 textarea {
   background: transparent;
-  border: none;
+  border: 1px solid black;
   resize: none;
   color: var(--primary-color);
   border-left: 1px solid var(--primary-color);
   border-right: 3px solid var(--trimery-color);
   padding: 10px;
-  outline: none;
 }
 
 textarea:focus {
